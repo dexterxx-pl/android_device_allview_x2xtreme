@@ -72,9 +72,11 @@ BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 BOARD_DISABLE_HW_ID_MATCH_CHECK := true;
 
 # Kernel
-
+TARGET_KERNEL_SOURCE := kernel/allview/x2xtreme
+TARGET_KERNEL_CONFIG := x2xtreme_defconfig
 TARGET_USES_64_BIT_BINDER := true
 TARGET_IS_64_BIT := true
+BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -86,8 +88,6 @@ BOARD_MKBOOTIMG_ARGS := \
 	--second_offset 0x00e88000 \
 	--tags_offset 0x0df88000 \
 	--board 1453346013
-#prebuilt
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # build old-style zip files (required for ota updater)
 BLOCK_BASED_OTA := false
@@ -173,7 +173,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery
-#RECOVERY_VARIANT := twrp
+RECOVERY_VARIANT := twrp
 
 # TWRP stuff
 ifeq ($(RECOVERY_VARIANT), twrp)
