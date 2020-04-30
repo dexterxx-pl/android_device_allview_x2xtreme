@@ -120,11 +120,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-# Var patch
-ifneq ($(TARGET_BUILD_VARIANT),user,userdebug,eng)
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
-endif
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
