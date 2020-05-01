@@ -2,6 +2,10 @@
 # MTK Policy Rule
 # ============
 
+type radio_tmpfs, file_type;
+#type_transition radio tmpfs:file radio_tmpfs;
+allow radio radio_tmpfs:file { read write };
+
 allow radio custom_file:dir getattr;
 #violate never allow rule
 #allow radio device:chr_file { read write ioctl open getattr };

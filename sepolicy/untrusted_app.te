@@ -3,6 +3,9 @@
 # ==============================================
 
 #permissive untrusted_app;
+type untrusted_app_tmpfs, file_type;
+#type_transition untrusted_app tmpfs:file untrusted_app_tmpfs;
+allow untrusted_app untrusted_app_tmpfs:file { read write };
 
 # Date : 2014/09/04
 # Stage: BaseUT

@@ -2,6 +2,9 @@
 # MTK Policy Rule
 # ==============================================
 
+type toolbox_tmpfs, file_type;
+type_transition toolbox tmpfs:file toolbox_tmpfs;
+allow toolbox toolbox_tmpfs:file { read write };
 
 # Date : WK15.29
 # Operation : Migration

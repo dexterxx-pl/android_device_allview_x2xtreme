@@ -2,6 +2,9 @@
 # MTK Policy Rule
 # ============
 
+type debuggerd, domain;
+type debuggerd_exec, exec_type, file_type;
+
 # Date : WK14.32
 # Operation : AEE UT
 # Purpose : for AEE module

@@ -2,6 +2,9 @@
 # MTK Policy Rule
 # ============
 
+type wpa, domain;
+type wpa_exec, exec_type, file_type;
+
 allow wpa rild_oem_socket:sock_file write;
 allow wpa rild_oem_md2_socket:sock_file write;
 allow wpa mtkrild:unix_stream_socket connectto;
