@@ -12,7 +12,7 @@ LOCAL_SRC_FILES := \
 # only for 64bit libraries
 LOCAL_SRC_FILES_64 := mtk_parcel.cpp
 
-LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui
+LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc
 LOCAL_MODULE := libmtk_symbols
 LOCAL_MODULE_TAGS := optional
 
