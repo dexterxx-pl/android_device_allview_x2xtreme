@@ -223,7 +223,7 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 #BOARD_SEPOLICY_DIRS := \
 #    device/allview/x2xtreme/sepolicy
 
-POLICYVERS := 29
+POLICYVERS := 30
 
 # Seccomp Filter
 BOARD_SECCOMP_POLICY := \
