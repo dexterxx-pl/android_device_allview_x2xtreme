@@ -400,7 +400,7 @@ on post-fs-data
     mkdir /data/misc/ppp 0770 bluetooth net_bt
 
     # Android SEC related device nodes
-    mknod /dev/sec c 182 0
+    #mknod /dev/sec c 182 0
     chmod 0660 /dev/sec
     chown root system /dev/sec
 
@@ -1052,7 +1052,7 @@ service mtkbt /system/bin/mtkbt
 	socket bt.int.adp dgram 660 bluetooth net_bt
 	socket bt.a2dp.stream dgram 660 bluetooth net_bt
 	user bluetooth
-	group system vpn net_admin inet net_raw net_bt bluetooth net_bt_admin net_bt_stack sdcard_r
+	group system vpn net_admin inet net_raw net_bt bluetooth net_bt_admin sdcard_r
 	oneshot
 
 #
@@ -1168,9 +1168,7 @@ service memsicd3416x /system/bin/memsicd3416x
     user system
     group system
     class main
-//Vanzo:dingge on: Mon, 20 Apr 2015 12:48:51 +0800
     oneshot
-//End of Vanzo: dingge
 
 service akmd8975 /system/bin/akmd8975
     disabled
