@@ -50,7 +50,7 @@ allow enableswap proc:file write;
 allow enableswap system_file:file execute_no_trans;
 allow enableswap enableswap_data_file:file { create open write };
 allow enableswap system_data_file:dir { write add_name };
-allow enableswap self:capability dac_override;
+#allow enableswap self:capability dac_override;
 
 # Date : WK15.30
 # Operation : Migration

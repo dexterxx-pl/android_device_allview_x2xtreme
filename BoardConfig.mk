@@ -221,7 +221,7 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
-    device/allview/x2xtreme/sepolicy_final
+    device/allview/x2xtreme/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
 POLICYVERS := 30
