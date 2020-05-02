@@ -4,6 +4,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from the common Open Source product configuration
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Dalvik heap configurations
@@ -16,7 +17,8 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui
 $(call inherit-product, device/common/gps/gps_us_supl.mk) 
 
 # Vendor
-$(call inherit-product, vendor/allview/x2xtreme/x2xtreme-vendor-blobs.mk)
+$(call inherit-product, vendor/allview/x2xtreme/x2xtreme-vendor.mk)
+
 
 # Overlay Folder
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
