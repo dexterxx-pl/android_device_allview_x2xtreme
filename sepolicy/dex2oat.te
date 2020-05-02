@@ -2,6 +2,8 @@
 # MTK Policy Rule
 # ==============================================
 
+#type dex2oat_exec, exec_type, file_type;
+
 # Date : WK14.34
 # Operation : Migration
 # Purpose : 6571/6572 LCA external memory access(/dev/exm0)

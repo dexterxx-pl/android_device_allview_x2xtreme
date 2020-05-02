@@ -62,7 +62,6 @@ allow shell netdiag_exec:file rx_file_perms;
 allow shell nvram_agent_binder_exec:file rx_file_perms;
 allow shell nvram_daemon_exec:file rx_file_perms;
 allow shell orientationd_exec:file rx_file_perms;
-allow shell dex2oat_exec:file rx_file_perms;
 allow shell ppl_agent_exec:file rx_file_perms;
 allow shell ppp_exec:file rx_file_perms;
 allow shell pq_exec:file rx_file_perms;
