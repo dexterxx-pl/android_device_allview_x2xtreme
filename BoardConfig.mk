@@ -77,7 +77,8 @@ TARGET_KERNEL_CONFIG := x2xtreme_defconfig
 TARGET_USES_64_BIT_BINDER := true
 TARGET_IS_64_BIT := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := \
@@ -221,10 +222,10 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
-    device/allview/x2xtreme/sepolicy
-SELINUX_IGNORE_NEVERALLOWS := true
+    device/allview/x2xtreme/sepolicy_final
+#SELINUX_IGNORE_NEVERALLOWS := true
 
-POLICYVERS := 30
+POLICYVERS := 29
 
 # Seccomp Filter
 BOARD_SECCOMP_POLICY := \

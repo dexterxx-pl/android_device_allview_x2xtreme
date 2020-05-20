@@ -1,0 +1,30 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+#type isolated_app, domain;
+
+#typeattribute isolated_app appdomain;
+# Label ashmem objects with our own unique type.
+
+type isolated_app_tmpfs, file_type;
+#type_transition isolated_app tmpfs:file isolated_app_tmpfs;
+allow isolated_app isolated_app_tmpfs:file { read write };
+
+# Map with PROT_EXEC.
+allow isolated_app isolated_app_tmpfs:file execute;
+
+
+# Access already open app data files received over Binder or local socket IPC.
+allow isolated_app app_data_file:file { read write getattr lock };
+
+allow isolated_app activity_service:service_manager find;
+allow isolated_app display_service:service_manager find;
+
+# Date : WK15.15
+# Operation : [Rose][Free Test][FTester]
+# Purpose : Chrome belong to GMS package. 
+#           it is blocked by selinux, need isolated_app to open permission.
+#allow isolated_app untrusted_app_tmpfs:file write;
+
+

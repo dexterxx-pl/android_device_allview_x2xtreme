@@ -222,7 +222,8 @@
 /dev/socket/dfo(/.*)? u:object_r:dfo_socket:s0
 /dev/socket/dnsproxyd(/.*)? u:object_r:dnsproxyd_socket:s0
 /dev/socket/dumpstate(/.*)? u:object_r:dumpstate_socket:s0
-/dev/socket/installd(/.*)? u:object_r:installd_socket:s0
+# TODO(dexterxx) uncomment
+#/dev/socket/installd(/.*)? u:object_r:installd_socket:s0
 /dev/socket/mdnsd(/.*)? u:object_r:mdnsd_socket:s0
 /dev/socket/mdns(/.*)? u:object_r:mdns_socket:s0
 /dev/socket/mnld(/.*)? u:object_r:mnld_socket:s0
