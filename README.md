@@ -1,6 +1,10 @@
-# Allview X2 Soul Xtreme - LineageOS 14.1
+# Allview X2 Soul Xtreme - LineageOS 17.1
 
-This branch is device for building of the LineageOS 14.1.
+This branch was my sandbox on my first-life's lineage builds.
+
+BOOT.img is not bootable (it doesn't event looks properly after unpacking), I was also unable to debug it.
+
+I've probably discontinued work on it and revert to lineageos 13.0-14.1 somewhere.
 
 ---
 
@@ -28,13 +32,10 @@ Camera  | Primary: 24 MP, Secondary: 8 MP
 
 ## THANKS TO:
 
-WisniaPL
-
-DeckerSU
-
-M.A.D
-
-Bule
-
-Danielhk
+* bemolxd
+* WisniaPL
+* DeckerSU
+* M.A.D
+* Bule
+* Danielhk
 
